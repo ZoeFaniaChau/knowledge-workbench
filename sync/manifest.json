@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source": "notion",
+  "workspace": "Zoe Fañiá Chau 的 Notion",
+  "data_source": "7dbb6604-ba39-483f-948b-92e6ba6208e3",
+  "objects": {
+    "3e35b0a8-98a3-8096-aa3b-e575292670da": {
+      "title": "模块化不是拆分，而是让变化有边界",
+      "kind": "Research",
+      "path": "knowledge/research/模块化不是拆分，而是让变化有边界.md"
+    }
+  }
+}
