@@ -143,7 +143,11 @@ The manifest is therefore a synchronization boundary, not a second content datab
 
 Each synchronized Knowledge Workbench entry has an explicit GitHub path.
 
-The path is stored in the Knowledge Workbench metadata and represented in the manifest.
+The manifest is the Gateway's canonical machine-readable mapping from Notion page ID to GitHub path.
+
+The GitHub Path property in Notion is synchronization metadata exposed to the editing and governance layer. It does not independently determine the write target in Sync Contract v1.
+
+The Gateway must use the manifest when resolving the actual GitHub write path.
 
 Current convention:
 
@@ -176,9 +180,11 @@ Supported states:
 - Error
 - Disabled
 
-The Gateway currently writes the states required by the implemented synchronization flow.
+The v1 data model defines Pending, Synced, Outdated, Conflict, Error, and Disabled as the available synchronization states.
 
-The remaining states are part of the contract so that the metadata model can evolve without redefining the conceptual state machine.
+The Gateway currently implements Pending, Synced, and Error.
+
+Outdated, Conflict, and Disabled remain reserved states until their triggering conditions and ownership rules are explicitly defined.
 
 ### GitHub Last Synced
 
